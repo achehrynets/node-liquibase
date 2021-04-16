@@ -41,7 +41,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/update.html Documentation}
      */
-    update(params: UpdateCommandAttributes): Promise<unknown>;
+    update(params: UpdateCommandAttributes): this;
     /**
      * The updateSQL command is a helper command that allows you to inspect the SQL Liquibase will run while using the update command.
      * @param params Arguments/Attributes for the command
@@ -50,7 +50,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/updatesql.html Documentation}
      */
-    updateSQL(params: UpdateSQLCommandAttributes): Promise<unknown>;
+    updateSQL(params: UpdateSQLCommandAttributes): this;
     /**
      * The updateCount <value> command updates a specified number of changesets, where <value> is the number of changesets you want to update sequentially on your database.
      * @param params Arguments/Attributes for the command
@@ -59,7 +59,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/updatecount.html Documentation}
      */
-    updateCount(params: UpdateCountCommandAttributes): Promise<unknown>;
+    updateCount(params: UpdateCountCommandAttributes): this;
     /**
      * The updateCountSQL <value> command is a helper command that inspects the SQL Liquibase will run while using the updateCount <value> command.
      * @param params Arguments/Attributes for the command
@@ -68,7 +68,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/updatecountsql.html Documentation}
      */
-    updateCountSQL(params: UpdateCountSQLCommandAttributes): Promise<unknown>;
+    updateCountSQL(params: UpdateCountSQLCommandAttributes): this;
     /**
      * updateTestingRollback tests rollback support by deploying all pending changesets to the database, executes a rollback sequentially for the equal number of changesets that were deployed, and then runs the update again deploying all changesets to the database.
      *
@@ -82,7 +82,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/updatetestingrollback.html Documentation}
      */
-    updateTestingRollback(): Promise<unknown>;
+    updateTestingRollback(): this;
     /**
      * The updateToTag <tag> command applies sequential changes to your database from the newest changeset to the changeset with the tag you specified and applied earlier.
      * @param params Arguments/Attributes for the command
@@ -91,7 +91,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/updatetotag.html Documentation}
      */
-    updateToTag(params: UpdateToTagCommandAttributes): Promise<unknown>;
+    updateToTag(params: UpdateToTagCommandAttributes): this;
     /**
      * The updateToTagSQL <tag> command is a helper command that inspects the SQL Liquibase will run while using the updateToTag <tag> command.
      * @param params Arguments/Attributes for the command
@@ -100,7 +100,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/updatetotagsql.html Documentation}
      */
-    updateToTagSQL(params: UpdateToTagSQLCommandAttributes): Promise<unknown>;
+    updateToTagSQL(params: UpdateToTagSQLCommandAttributes): this;
     /**
      * The validate command checks and identifies any possible errors in a changelog that can cause the update command to fail.
      *
@@ -117,7 +117,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/validate.html Documentation}
      */
-    validate(): Promise<unknown>;
+    validate(): this;
     /**
      * The calculateCheckSum <id> command calculates and prints a checksum for the changeset with the specified id in the following format: filepath::id::author.
      *
@@ -129,7 +129,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/calculatechecksum.html Documentation}
      */
-    calculateCheckSum(params: CalculateCheckSumCommandAttributes): Promise<unknown>;
+    calculateCheckSum(params: CalculateCheckSumCommandAttributes): this;
     /**
      * The rollback <tag> command rolls back changes made to the database based on the specified tag.
      *
@@ -142,7 +142,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/rollbackbytag.html}
      */
-    rollback(params: RollbackCommandAttributes): Promise<unknown>;
+    rollback(params: RollbackCommandAttributes): this;
     /**
      * The rollbackSQL <tag> is a helper command that produces the raw SQL Liquibase would run when using the rollback<tag> command.
      *
@@ -153,7 +153,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/rollbacksqltag.html}
      */
-    rollbackSQL(params: RollbackSQLCommandAttributes): Promise<unknown>;
+    rollbackSQL(params: RollbackSQLCommandAttributes): this;
     /**
      * The rollbackCount <value> command reverts a specified number of changesets, where <value> is the number of changesets you want to revert sequentially on your database.
      *
@@ -164,7 +164,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/rollbackcount.html}
      */
-    rollbackCount(params: RollbackCountCommandAttributes): Promise<unknown>;
+    rollbackCount(params: RollbackCountCommandAttributes): this;
     /**
      * The rollbackCountSQL <value> command is a helper command that allows you to inspect the SQL Liquibase will run while using the rollbackCount <value> command.
      *
@@ -176,7 +176,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/rollbackcountsql.html}
      */
-    rollbackCountSQL(params: RollbackCountSQLCommandAttributes): Promise<unknown>;
+    rollbackCountSQL(params: RollbackCountSQLCommandAttributes): this;
     /**
      * The rollbackToDate command reverts your database to the state it was in at the date and time you specify.
      *
@@ -187,7 +187,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/rollbacktodate.html}
      */
-    rollbackToDate(params: RollbackToDateCommandAttributes): Promise<unknown>;
+    rollbackToDate(params: RollbackToDateCommandAttributes): this;
     /**
      * The rollbackToDateSQL command is a helper command that allows you to inspect the SQL Liquibase will run while using the rollbackToDate command.
      *
@@ -198,7 +198,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/rollbacktodatesql.html}
      */
-    rollbackToDateSQL(params: RollbackToDateSQLCommandAttributes): Promise<unknown>;
+    rollbackToDateSQL(params: RollbackToDateSQLCommandAttributes): this;
     /**
      * The snapshot command captures the current state of the URL database, which is the target database.
      *
@@ -213,7 +213,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/snapshot.html}
      */
-    snapshot(params: SnapshotCommandAttributes): Promise<unknown>;
+    snapshot(params: SnapshotCommandAttributes): this;
     /**
      * The snapshotReference command captures the current state of the referenceURL database, which is the source database.
      *
@@ -228,7 +228,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/snapshotreference.html}
      */
-    snapshotReference(params: SnapshotReferenceCommandAttributes): Promise<unknown>;
+    snapshotReference(params: SnapshotReferenceCommandAttributes): this;
     /**
      * The status --verbose command produces a list of pending changesets with additional information that includes the id, author, and file path name.
      * The status --verbose command does not modify the database.
@@ -238,7 +238,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/status-verbose.html}
      */
-    status(): Promise<unknown>;
+    status(): this;
     /**
      * The syncHub command synchronizes the local DATABASECHANGELOG table with Liquibase Hub.
      *
@@ -255,7 +255,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/synchub.html}
      */
-    syncHub(params: SyncHubCommandAttributes): Promise<unknown>;
+    syncHub(params: SyncHubCommandAttributes): this;
     /**
      * The tag <tag string> command marks the current database state so you can roll back changes in the future.
      *
@@ -266,7 +266,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/tag.html}
      */
-    tag(params: TagCommandAttributes): Promise<unknown>;
+    tag(params: TagCommandAttributes): this;
     /**
      * The tagExists <tag string> command checks whether the tag you specify already exists in your database.
      *
@@ -277,7 +277,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/tagexists.html}
      */
-    tagExists(params: TagExistsCommandAttributes): Promise<unknown>;
+    tagExists(params: TagExistsCommandAttributes): this;
     /**
      * The unexpectedChangeSets command produces a list of changesets that were run in the database but do not exist in the current changelog.
      *
@@ -288,7 +288,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/unexpectedchangesets.html}
      */
-    unexpectedChangeSets(): Promise<unknown>;
+    unexpectedChangeSets(): this;
     /**
      * dropAll drops all database objects owned by the user. dropAll will not drop functions, procedures, or packages for the community version of Liquibase. Functions, procedures, packages, and synonyms can only be dropped for Liquibase Pro supported objects.
      *
@@ -299,7 +299,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/dropall.html Documentation}
      */
-    dropAll(): Promise<unknown>;
+    dropAll(): this;
     /**
      * The futureRollbackSQL command is a helper command that produces the raw SQL Liquibase would need to roll back changes that have not yet been deployed to your database.
      *
@@ -308,7 +308,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/futurerollbacksql.html Documentation}
      */
-    futureRollbackSQL(): Promise<unknown>;
+    futureRollbackSQL(): this;
     /**
      * The futureRollbackCountSQL <value> command generates the SQL that Liquibase would use to sequentially revert the number of changes associated with undeployed changesets, which are added to a changelog file.
      *
@@ -318,7 +318,7 @@ export declare class Liquibase {
      * It is best practice to inspect SQL, which Liquibase would run when using the rollback command so you can review any changes the command would make to your database.
      * {@link https://docs.liquibase.com/commands/community/futurerollbackcountsql.html Documentation}
      */
-    futureRollbackCountSQL(params: FutureRollbackCountSQLCommandAttributes): Promise<unknown>;
+    futureRollbackCountSQL(params: FutureRollbackCountSQLCommandAttributes): this;
     /**
      * The generateChangeLog command creates a changelog file that has a sequence of changesets which describe how to re-create the current state of the database.
      *
@@ -329,7 +329,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/generatechangelog.html Documentation}
      */
-    generateChangeLog(params: GenerateChangeLogCommandAttributes): Promise<unknown>;
+    generateChangeLog(params: GenerateChangeLogCommandAttributes): this;
     /**
      * The --help command lists all the available Liquibase commands, required and optional parameters, and changelog property. The command also presents Liquibase Hub commands— registerChangeLog, syncHub, and the hubAPIKey property with the definitions.
      *
@@ -350,7 +350,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/help.html Documentation}
      */
-    help(): Promise<unknown>;
+    help(): this;
     /**
      * The history command is a helper command that lists out all your deploymentIds and all changesets associated with each deploymentId.
      *
@@ -358,7 +358,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/history.html Documentation}
      */
-    history(): Promise<unknown>;
+    history(): this;
     /**
      * listLocks returns the hostname, IP address, and the timestamp the Liquibase lock record was added to the DATABASECHANGELOGLOCK table.
      *
@@ -367,7 +367,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/listlocks.html Documentation}
      */
-    listLocks(): Promise<unknown>;
+    listLocks(): this;
     /**
      * The markNextChangeSetRan command marks the next change you apply as executed in your database.
      *
@@ -392,7 +392,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/marknextchangesetran.html Documentation}
      */
-    markNextChangeSetRan(): Promise<unknown>;
+    markNextChangeSetRan(): this;
     /**
      * The markNextChangeSetRanSQL command is a helper command that inspects the SQL Liquibase will run while using the markNextChangeSetRan command.
      *
@@ -401,7 +401,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/marknextchangesetransql.html Documentation}
      */
-    markNextChangeSetRanSQL(): Promise<unknown>;
+    markNextChangeSetRanSQL(): this;
     /**
      * The registerChangeLog command connects your local Liquibase activity to a specific Liquibase Hub Project. By registering your changelog, this activity will be visible only to one Project within one Organization in Liquibase Hub.
      *
@@ -411,7 +411,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/registerchangelog.html Documentation}
      */
-    registerChangeLog(): Promise<unknown>;
+    registerChangeLog(): this;
     /**
      * releaseLocks removes the specific Liquibase lock record from the DATABASECHANGELOGLOCK table in the needed database.
      *
@@ -419,8 +419,8 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/releaselocks.html Documentation}
      */
-    releaseLocks(): Promise<unknown>;
-    changelogSync(): Promise<unknown>;
+    releaseLocks(): this;
+    changelogSync(): this;
     /**
      * The changelogSyncSQL is a helper command that produces the raw SQL Liquibase would run when using the changelogSync command.
      *
@@ -429,7 +429,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/changelogsyncsql.html Documentation}
      */
-    changelogSyncSQL(): Promise<unknown>;
+    changelogSyncSQL(): this;
     /**
      * The changelogSyncToTag command marks all undeployed changesets from your changelog up to the specified tag as executed in your database. The command also marks the changeset with that tag as deployed.
      *
@@ -443,7 +443,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/changelogsynctotag.html Documentation}
      */
-    changelogSyncToTag(params: ChangelogSyncToTagCommandAttributes): Promise<unknown>;
+    changelogSyncToTag(params: ChangelogSyncToTagCommandAttributes): this;
     /**
      * The changelogSyncToTagSQL is a helper command that produces the raw SQL that Liquibase would run when using the changelogSyncToTag command to mark all undeployed changesets associated with the specified tag as executed in your database.
      *
@@ -455,7 +455,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/changelogsynctotagsql.html Documentation}
      */
-    changelogSyncToTagSQL(params: ChangelogSyncToTagSQLCommandAttributes): Promise<unknown>;
+    changelogSyncToTagSQL(params: ChangelogSyncToTagSQLCommandAttributes): this;
     /**
      * The clearCheckSums clears all checksums and nullifies the MD5SUM column of the DATABASECHANGELOG table so they will be re-computed on the next database update.
      *
@@ -463,7 +463,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/clearchecksums.html Documentation}
      */
-    clearCheckSums(): Promise<unknown>;
+    clearCheckSums(): this;
     /**
      * The dbDoc <outputDirectory> command generates documentation in a Javadoc format based on the existing database and changelogs.
      *
@@ -474,7 +474,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/dbdoc.html Documentation}
      */
-    dbDoc(params: DbDocCommandAttributes): Promise<unknown>;
+    dbDoc(params: DbDocCommandAttributes): this;
     /**
      * The deactivateChangeLog command removes the changelogID from your changelog file so it stops sending reports to Liquibase Hub.
      *
@@ -485,7 +485,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/deactivatechangelog.html Documentation}
      */
-    deactivateChangeLog(): Promise<unknown>;
+    deactivateChangeLog(): this;
     /**
      * The `diff` command in Liquibase allows you to compare two databases of the same type, or different types, to one another.
      *
@@ -499,7 +499,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/diff.html Documentation}
      */
-    diff(params: DiffCommandAttributes): Promise<unknown>;
+    diff(params: DiffCommandAttributes): this;
     /**
      * The diffChangeLog command allows you to receive information on differences between two databases you are comparing and creates a changelog file containing deployable changesets.
      * The diffChangeLog command points out the differences in general and generates changes to resolve most of them.
@@ -514,7 +514,7 @@ export declare class Liquibase {
      *
      * {@link https://docs.liquibase.com/commands/community/diffchangelog.html}
      */
-    diffChangelog(params: DiffChangelogCommandAttributes): Promise<unknown>;
+    diffChangelog(params: DiffChangelogCommandAttributes): this;
     private stringifyParams;
     /**
      * LEGACY CODE START
